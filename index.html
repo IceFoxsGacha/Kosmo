@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Планеты</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            height: 100vh;
+            color: darkcyan;
+            font-size: 1rem;
+            background-image: linear-gradient(rgb(0, 128, 122),black);
+        }
+        button{
+            font-size: 20px;
+            padding: 4px;
+            margin: 10px;
+            color: rgb(92, 118, 205);
+
+        }
+        img{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <button id="zemly">Земля</button>
+    <button id="Ne">Нептун</button>
+    <button id="We">Венера</button>
+    <button id="Qb">Юпитер</button>
+    <button id="Sa">Сатур</button>
+    <button id="Tu">Титан</button>
+    <!-- <button id="Uo">Ио</button>
+    <button id="Ef">Европа</button>
+    <button id="Bl">Плутон</button>
+    <button id="Yr">Уран</button>
+    <button id="Wo">Фобос</button>
+    <button id="Ly">Луна</button> -->
+
+  
+
+ <hr>   
+
+ <img id="foto" src="" alt=""> 
+ <h1 id="name"></h1>  
+ <h1 id="massa"></h1>  
+ <h1 id="graviti"></h1>  
+ <h1 id="temperat"></h1> 
+ 
+ <script>
+
+     let earth = {
+         foto:'https://s.hi-news.ru/wp-content/uploads/2016/02/152-750x469.jpg',
+         name:'Земля',
+         massa:'5,972E24 кг',
+         graviti:'9.8 m/c',
+         temperat:'14 c',
+     }
+     let Ne = {
+         foto:'https://img5.goodfon.ru/wallpaper/nbig/3/25/science-fiction-visual-effects-galaxy-universe-fresh-viewp-6.jpg',
+         name:' Нептун',
+         massa:'1,024E26 кг',
+         graviti:'11,15 м/с²',
+         temperat:'220 °C',
+     }
+     let We = {
+         foto:'https://veber.ru/upload/medialibrary/1b7/venera_teleskop.jpeg',
+         name:'Венера',
+         massa:'4,867E24 кг',
+         graviti:'8,87 м/с²',
+         temperat:'467 °C',
+     }
+     let Qb = {
+         foto:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsMrTrhqH-0SXkqh-NE6Z1VKS1K0IdeIAlBA&usqp=CAU',
+         name:' Юпитер',
+         massa:'1,898E27 кг',
+         graviti:'24,79 м/с²',
+         temperat:'-145°C',
+     }
+     let Sa = {
+         foto:'https://moonorganizer.com/wp-content/uploads/2018/09/Saturn.jpg',
+         name:' Сатур',
+         massa:'5,683E26 кг',
+         graviti:'10,44 м/с²',
+         temperat:' - 190',
+     }
+     let Tu = {
+         foto:'https://lh3.googleusercontent.com/proxy/-vQiNbrjOGH7lrXT-oe7CYuFI51oO7cVhuWBo80Y-4p1hUrhh9sxv4d0aYZdBPmcDWdL4UJe5bLxlb0DhxfJ5wPq7JLXzF0',
+         name:'Титан',
+         massa:'1,3452⋅1023 кг',
+         graviti:'1,352 м/с²',
+         temperat:'−180 °C',
+     }
+   ////////////////////////////////////////////////////////////////////////////////////////////////////////////     
+     document.getElementById('zemly').addEventListener('click',function(){
+
+         show(earth)
+     })
+     document.getElementById('Ne').addEventListener('click',function(){
+
+    show(Ne)
+    })
+    document.getElementById('We').addEventListener('click',function(){
+
+show(We)
+})
+document.getElementById('Qb').addEventListener('click',function(){
+
+show(Qb)
+})
+document.getElementById('Sa').addEventListener('click',function(){
+
+show(Sa)
+})
+document.getElementById('Tu').addEventListener('click',function(){
+
+show(Tu)
+})
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////     /////////////////////////////////////////////////////////////////////////////////////////////
+
+function show(obj){
+    document.getElementById('foto').src = obj.foto
+    document.getElementById('name').innerText = obj.name
+    document.getElementById('massa').innerText = obj.massa
+    document.getElementById('graviti').innerText = obj.graviti
+    document.getElementById('temperat').innerText = obj.temperat
+}
+ </script>
+    
+</body>
+</html>
